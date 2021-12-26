@@ -1,0 +1,77 @@
+# query {
+  # dishes (maxPrice: 9, minPrice: 8, dish_name: "" ) {
+  #   dish_id,
+  #   dish_name,
+  #   price,
+  #   from,
+  #   old_id
+  # }
+#   # orders (table: 2) {
+#   #   order_id,
+#   #   table_id
+#   #   general_price
+#   #   dishes {dish_id
+#   #     dish_name
+#   #     from
+#   #   }
+#   # }
+#   # menus {
+#   #   menu_id
+#   #   dishes {
+#   #     dish_id
+#   #     dish_name
+#   #     price
+#   #   }
+#   # }
+#   # dish (id: 1, service:true){
+#   #   dish_id
+#   #   dish_name
+#   #   from
+#   # }
+#   # order (id: 6) {
+#   #   order_id
+#   #   table_id
+#   #   dishes {
+#   #     dish_id
+#   #   }
+#   # }
+#   # menu (id: 3) {
+#   #   menu_id
+#   #   dishes {
+#   #     dish_id
+#   #     dish_name
+#   #     price
+#   #   }
+#   # }
+# }
+# mutation addDish {
+#   addDish(dish_name: "hello", price: 30) {success, message}
+# }
+
+#  mutation updateDish {
+#   updateDish(dish_id: 100013, dish_name: "hell", price: 30) {success, message}
+# }
+
+# {
+# dish (id: 100013, service:false){
+#     dish_id
+#     dish_name
+#     from
+#   }
+# }
+
+#  mutation deleteDish {
+#   deleteDish(dish_id: 100013) {success, message}
+# }
+
+# {
+# dish (id: 100013, service:false){
+#     dish_id
+#     dish_name
+#     from
+#   }
+# }
+
+# mutation createOrder {
+#   createOrder(dishes: [100, 1, 211, 10000], table_id: 4) {success, message}
+# }
